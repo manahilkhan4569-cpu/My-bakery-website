@@ -1,0 +1,1605 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ali Bakery | Freshness in Every Bite</title>
+
+<style>
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf5;
+    color: #39251d;
+    line-height: 1.6;
+}
+
+:root {
+    --brown: #512d20;
+    --light-brown: #a66a43;
+    --cream: #fff1df;
+    --gold: #e6b878;
+    --white: #ffffff;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    color: var(--brown);
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #806d60;
+}
+
+.small-title {
+    color: var(--light-brown);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* TOP BAR */
+
+.topbar {
+    background: #351c14;
+    color: white;
+    text-align: center;
+    padding: 9px;
+    font-size: 13px;
+}
+
+/* NAVBAR */
+
+header {
+    background: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px #00000012;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: var(--brown);
+}
+
+.logo span {
+    color: var(--light-brown);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #49352a;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--light-brown);
+}
+
+.nav-order {
+    background: var(--brown);
+    color: white !important;
+    padding: 11px 18px;
+    border-radius: 5px;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 600px;
+    background:
+    linear-gradient(rgba(30,15,8,0.55), rgba(30,15,8,0.55)),
+    url("https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1600")
+    center/cover;
+
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 70px 8%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content .small-title {
+    color: #f5c98c;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.2;
+    margin: 18px 0;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #f5e9df;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    background: var(--light-brown);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--brown);
+    transform: translateY(-2px);
+}
+
+.btn-light {
+    background: white;
+    color: var(--brown);
+    margin-left: 10px;
+}
+
+/* WELCOME SECTION */
+
+.welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.welcome img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.welcome-text h2 {
+    font-size: 37px;
+    margin: 12px 0;
+    color: var(--brown);
+}
+
+.welcome-text p {
+    color: #78675c;
+    margin-bottom: 18px;
+}
+
+/* OFFER BANNER */
+
+.offer {
+    background: var(--brown);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.offer h2 {
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.offer p {
+    margin-bottom: 20px;
+    color: #f5dfcc;
+}
+
+/* PRODUCTS */
+
+.products {
+    background: #fffaf5;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000010;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info h3 {
+    color: var(--brown);
+    font-size: 21px;
+}
+
+.product-info p {
+    color: #78675c;
+    margin: 10px 0;
+}
+
+.price {
+    color: var(--light-brown);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* SERVICES */
+
+.services {
+    background: var(--cream);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    text-align: center;
+    padding: 35px 20px;
+    background: white;
+    border-radius: 12px;
+}
+
+.service-card .icon {
+    font-size: 42px;
+}
+
+.service-card h3 {
+    color: var(--brown);
+    margin: 12px 0;
+}
+
+.service-card p {
+    color: #78675c;
+}
+
+/* WHY CHOOSE US */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.why-card {
+    padding: 25px 12px;
+}
+
+.why-card h3 {
+    color: var(--brown);
+    margin: 12px 0;
+}
+
+.why-card .icon {
+    font-size: 40px;
+}
+
+/* ABOUT */
+
+.about {
+    background: #f3e2d1;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about-content img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    color: var(--brown);
+    margin: 10px 0;
+}
+
+.about-content p {
+    color: #69574b;
+    margin-bottom: 15px;
+}
+
+/* REVIEWS */
+
+.reviews {
+    background: white;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.review-card {
+    background: #fffaf5;
+    padding: 28px;
+    border-radius: 10px;
+    border: 1px solid #f0e2d6;
+}
+
+.stars {
+    color: #d79c36;
+    font-size: 21px;
+}
+
+.review-card p {
+    color: #78675c;
+    margin: 15px 0;
+}
+
+.review-card h4 {
+    color: var(--brown);
+}
+
+/* GALLERY */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.04);
+}
+
+/* FAQ */
+
+.faq {
+    background: var(--cream);
+}
+
+.faq-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+.faq-item h3 {
+    color: var(--brown);
+    margin-bottom: 8px;
+}
+
+.faq-item p {
+    color: #78675c;
+}
+
+/* ORDER FORM */
+
+.order-section {
+    background: #f2e2d3;
+    display: none;
+}
+
+.order-box {
+    background: white;
+    max-width: 720px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.order-box h2 {
+    color: var(--brown);
+    text-align: center;
+    font-size: 32px;
+}
+
+.order-box > p {
+    text-align: center;
+    color: #78675c;
+    margin: 10px 0 25px;
+}
+
+.order-box label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 7px;
+}
+
+.order-box input,
+.order-box select,
+.order-box textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddcabb;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial;
+}
+
+.order-box input:focus,
+.order-box select:focus,
+.order-box textarea:focus {
+    outline: 2px solid #c18b62;
+}
+
+.order-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.order-buttons button {
+    flex: 1;
+}
+
+.close-btn {
+    background: #777;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 13px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: #fffaf5;
+    text-align: center;
+    padding: 30px 15px;
+    border-radius: 10px;
+}
+
+.contact-card .icon {
+    font-size: 35px;
+}
+
+.contact-card h3 {
+    color: var(--brown);
+    margin: 10px 0;
+}
+
+.contact-card p {
+    color: #78675c;
+}
+
+/* FOOTER */
+
+footer {
+    background: #351c14;
+    color: white;
+    padding: 55px 8% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+    color: #f1c18a;
+}
+
+footer p {
+    color: #e1d1c5;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #e1d1c5;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid #715346;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 900px) {
+
+    .product-grid,
+    .service-grid,
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .welcome,
+    .about-content,
+    .product-grid,
+    .service-grid,
+    .review-grid,
+    .contact-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .order-box {
+        padding: 22px;
+    }
+
+    .order-buttons {
+        flex-direction: column;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    Freshly Baked Every Day | Taste the Happiness!
+</div>
+
+
+<!-- NAVIGATION BAR -->
+
+<header>
+
+    <div class="logo">🍰 Ali <span>Bakery</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#order" class="nav-order"
+        onclick="openOrder('')">Order Now</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="small-title">WELCOME TO ALI BAKERY</span>
+
+        <h1>Freshness In Every Bite!</h1>
+
+        <p>
+            Discover the perfect taste of happiness with our
+            freshly baked cakes, cookies, pastries and delicious
+            bakery treats. Made with love, served with care.
+        </p>
+
+        <a href="#products" class="btn">
+            Explore Our Menu
+        </a>
+
+        <a href="#about" class="btn btn-light">
+            Discover More
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- WELCOME SECTION -->
+
+<section class="section">
+
+    <div class="container welcome">
+
+        <div>
+            <img
+            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=900"
+            alt="Fresh bakery pastries">
+        </div>
+
+        <div class="welcome-text">
+
+            <span class="small-title">A LITTLE ABOUT US</span>
+
+            <h2>Welcome to Our Sweet World!</h2>
+
+            <p>
+                At Ali Bakery, we believe that good food brings
+                people together. Every cake, cookie and pastry
+                is made to bring a smile to your face.
+            </p>
+
+            <p>
+                From your everyday breakfast to your special
+                celebrations, we have something delicious
+                for every occasion.
+            </p>
+
+            <a href="#about" class="btn">Read Our Story</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OFFER SECTION -->
+
+<section class="offer">
+
+    <span class="small-title">SPECIAL OFFER</span>
+
+    <h2>Make Your Moments Extra Sweet!</h2>
+
+    <p>
+        Celebrate your special occasions with delicious
+        cakes and freshly prepared bakery treats.
+    </p>
+
+    <a href="#products" class="btn">
+        Explore Products
+    </a>
+
+</section>
+
+
+<!-- PRODUCTS SECTION -->
+
+<section class="section products" id="products">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="small-title">OUR MENU</span>
+
+            <h2>Our Best Selling Products</h2>
+
+            <p>
+                Carefully prepared treats to make every day special.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700"
+                alt="Chocolate Cake">
+
+                <div class="product-info">
+
+                    <h3>Chocolate Cake</h3>
+
+                    <p>
+                        Rich chocolate flavour with a soft,
+                        delicious texture.
+                    </p>
+
+                    <div class="price">Rs. 1,800</div>
+
+                    <button class="btn"
+                    onclick="openOrder('Chocolate Cake')">
+                    Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=700"
+                alt="Croissants">
+
+                <div class="product-info">
+
+                    <h3>Fresh Croissants</h3>
+
+                    <p>
+                        Golden, flaky and freshly baked
+                        buttery croissants.
+                    </p>
+
+                    <div class="price">Rs. 350</div>
+
+                    <button class="btn"
+                    onclick="openOrder('Fresh Croissants')">
+                    Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=700"
+                alt="Cookies">
+
+                <div class="product-info">
+
+                    <h3>Sweet Cookies</h3>
+
+                    <p>
+                        Crunchy and tasty cookies
+                        for every occasion.
+                    </p>
+
+                    <div class="price">Rs. 250</div>
+
+                    <button class="btn"
+                    onclick="openOrder('Sweet Cookies')">
+                    Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=700"
+                alt="Cupcakes">
+
+                <div class="product-info">
+
+                    <h3>Delicious Cupcakes</h3>
+
+                    <p>
+                        Beautifully decorated cupcakes
+                        with creamy toppings.
+                    </p>
+
+                    <div class="price">Rs. 180</div>
+
+                    <button class="btn"
+                    onclick="openOrder('Delicious Cupcakes')">
+                    Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=700"
+                alt="Donuts">
+
+                <div class="product-info">
+
+                    <h3>Chocolate Donuts</h3>
+
+                    <p>
+                        Soft donuts covered with
+                        delicious chocolate.
+                    </p>
+
+                    <div class="price">Rs. 200</div>
+
+                    <button class="btn"
+                    onclick="openOrder('Chocolate Donuts')">
+                    Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1506459225024-1428097a7e18?w=700"
+                alt="Fresh Bread">
+
+                <div class="product-info">
+
+                    <h3>Fresh Bread</h3>
+
+                    <p>
+                        Soft and freshly baked bread
+                        for your daily meals.
+                    </p>
+
+                    <div class="price">Rs. 180</div>
+
+                    <button class="btn"
+                    onclick="openOrder('Fresh Bread')">
+                    Order Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES SECTION -->
+
+<section class="section services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="small-title">WHAT WE OFFER</span>
+
+            <h2>Our Bakery Services</h2>
+
+            <p>We make your celebrations more memorable.</p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="icon">🎂</div>
+
+                <h3>Custom Cakes</h3>
+
+                <p>
+                    Special cakes designed for birthdays,
+                    anniversaries and celebrations.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">🚚</div>
+
+                <h3>Home Delivery</h3>
+
+                <p>
+                    Enjoy your favourite bakery items
+                    delivered to your doorstep.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">🎉</div>
+
+                <h3>Event Orders</h3>
+
+                <p>
+                    Delicious bakery treats for parties,
+                    gatherings and special events.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="small-title">OUR PROMISE</span>
+
+            <h2>Why Choose Ali Bakery?</h2>
+
+            <p>Quality and happiness are always our priority.</p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <div class="icon">🌾</div>
+                <h3>Quality Ingredients</h3>
+                <p>Carefully selected ingredients.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="icon">🥐</div>
+                <h3>Fresh Products</h3>
+                <p>Freshly prepared bakery treats.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="icon">❤️</div>
+                <h3>Made With Love</h3>
+                <p>Attention and care in every order.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="icon">😊</div>
+                <h3>Happy Customers</h3>
+                <p>Your satisfaction matters to us.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+
+<section class="section about" id="about">
+
+    <div class="container about-content">
+
+        <div>
+
+            <span class="small-title">OUR STORY</span>
+
+            <h2>More Than Just A Bakery</h2>
+
+            <p>
+                Welcome to Ali Bakery, a place where delicious
+                flavours and beautiful memories come together.
+                We are passionate about creating bakery products
+                that make ordinary moments extraordinary.
+            </p>
+
+            <p>
+                Our menu includes freshly baked breads,
+                delicious cakes, crispy cookies, pastries
+                and much more.
+            </p>
+
+            <p>
+                Whether you are celebrating a birthday,
+                planning a family gathering or simply
+                craving something sweet, Ali Bakery is
+                here to make your day better.
+            </p>
+
+            <a href="#contact" class="btn">
+                Get In Touch
+            </a>
+
+        </div>
+
+        <div>
+
+            <img
+            src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=900"
+            alt="Bakery shop">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CUSTOMER REVIEWS -->
+
+<section class="section reviews">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="small-title">CUSTOMER FEEDBACK</span>
+
+            <h2>What People Say About Us</h2>
+
+            <p>Some sample customer review designs.</p>
+
+        </div>
+
+
+        <div class="review-grid">
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "The chocolate cake was delicious!
+                    The taste and presentation were wonderful."
+                </p>
+
+                <h4>Sarah Ahmed</h4>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "Fresh, tasty and beautifully prepared
+                    bakery items. Loved the experience!"
+                </p>
+
+                <h4>Ali Hassan</h4>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "A lovely bakery with amazing products.
+                    I would definitely recommend it."
+                </p>
+
+                <h4>Ayesha Khan</h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="section" id="gallery">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="small-title">OUR GALLERY</span>
+
+            <h2>A Taste of Happiness</h2>
+
+            <p>Explore our delicious bakery collection.</p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500" alt="Bread">
+
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Cake">
+
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500" alt="Croissant">
+
+            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500" alt="Cookies">
+
+            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=500" alt="Cupcakes">
+
+            <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=500" alt="Donuts">
+
+            <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=500" alt="Bakery">
+
+            <img src="https://images.unsplash.com/photo-1506459225024-1428097a7e18?w=500" alt="Fresh food">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ SECTION -->
+
+<section class="section faq">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="small-title">NEED HELP?</span>
+
+            <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>1. Do you make custom birthday cakes?</h3>
+
+            <p>
+                Yes! You can request a custom cake
+                using our order form.
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>2. Do you offer home delivery?</h3>
+
+            <p>
+                Home delivery can be arranged
+                according to your location.
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>3. How can I place an order?</h3>
+
+            <p>
+                Click any Order Now button and
+                complete the order form.
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>4. Can I order for special occasions?</h3>
+
+            <p>
+                Yes! You can mention your special
+                requirements in the order form.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ORDER FORM -->
+
+<section class="section order-section" id="order">
+
+    <div class="container">
+
+        <div class="order-box">
+
+            <h2>Place Your Order 🛒</h2>
+
+            <p>
+                Fill in the details below to request your
+                favourite bakery products.
+            </p>
+
+
+            <form id="orderForm">
+
+                <label>Full Name *</label>
+
+                <input type="text"
+                placeholder="Enter your full name"
+                required>
+
+
+                <label>Email Address *</label>
+
+                <input type="email"
+                placeholder="Enter your email"
+                required>
+
+
+                <label>Phone Number *</label>
+
+                <input type="tel"
+                placeholder="Enter your phone number"
+                required>
+
+
+                <label>Select Product *</label>
+
+                <select id="product" required>
+
+                    <option value="">Choose a product</option>
+
+                    <option>Chocolate Cake</option>
+                    <option>Fresh Croissants</option>
+                    <option>Sweet Cookies</option>
+                    <option>Delicious Cupcakes</option>
+                    <option>Chocolate Donuts</option>
+                    <option>Fresh Bread</option>
+
+                </select>
+
+
+                <label>Quantity *</label>
+
+                <input type="number"
+                min="1"
+                value="1"
+                required>
+
+
+                <label>Delivery Date *</label>
+
+                <input type="date" required>
+
+
+                <label>Delivery Address *</label>
+
+                <textarea rows="3"
+                placeholder="Enter your complete address"
+                required></textarea>
+
+
+                <label>Special Instructions</label>
+
+                <textarea rows="3"
+                placeholder="Write any special requests here">
+                </textarea>
+
+
+                <div class="order-buttons">
+
+                    <button type="submit" class="btn">
+                        Submit Order
+                    </button>
+
+                    <button type="button"
+                    class="close-btn"
+                    onclick="closeOrder()">
+                        Close Form
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT SECTION -->
+
+<section class="section contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="small-title">CONTACT US</span>
+
+            <h2>We Would Love To Hear From You</h2>
+
+            <p>
+                Have questions or want to place a special order?
+                Get in touch with us.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <div class="icon">📍</div>
+
+                <h3>Our Location</h3>
+
+                <p>Pakistan</p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">📞</div>
+
+                <h3>Phone Number</h3>
+
+                <p>0300-1234567</p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">✉️</div>
+
+                <h3>Email Address</h3>
+
+                <p>alibakery@gmail.com</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>🍰 Ali Bakery</h3>
+
+            <p>
+                Bringing happiness to your table with
+                delicious cakes, fresh bread, cookies
+                and beautiful bakery treats.
+            </p>
+
+            <p>Freshness In Every Bite!</p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+            <a href="#products">Our Products</a>
+            <a href="#services">Our Services</a>
+            <a href="#about">About Us</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact Information</h3>
+
+            <p>Phone: 0300-1234567</p>
+
+            <p>Email: alibakery@gmail.com</p>
+
+            <p>Location: Pakistan</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Ali Bakery. All Rights Reserved.
+        </p>
+
+        <p>
+            Designed with ❤️ for Bakery Lovers.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// OPEN ORDER FORM
+
+function openOrder(productName) {
+
+    const orderSection = document.getElementById("order");
+
+    const productSelect = document.getElementById("product");
+
+    orderSection.style.display = "block";
+
+    if (productName !== "") {
+        productSelect.value = productName;
+    }
+
+    orderSection.scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+// CLOSE ORDER FORM
+
+function closeOrder() {
+
+    document.getElementById("order").style.display = "none";
+
+}
+
+
+// SUBMIT ORDER FORM
+
+document.getElementById("orderForm").addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+        alert(
+            "Thank you for choosing Ali Bakery! " +
+            "Your demo order form has been submitted."
+        );
+
+        this.reset();
+
+        closeOrder();
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>
+
+
